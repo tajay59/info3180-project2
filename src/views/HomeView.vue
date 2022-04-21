@@ -1,22 +1,46 @@
 <script>
+import { RouterLink } from "vue-router";
 export default {
     data() {
         return {
-            message: "Hello World! This is Lab 7"
+            message: "Home of United Auto Sales"
         };
     },
 }
 </script>
 
 <template>
-    <div class="container">
-      <div class="text-center">
-        <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-        <h1>{{ message }}</h1>
+    <div class="homecontainer">
+      <div class="homeinfo"> 
+        <div class="homedetails">
+            <div class="hometitles">
+              <h1> Buy and Sell </h1>
+              <h1> Cars Online </h1>
+            </div>
+            <p class="homedescription"> <span>U</span>nited <span>A</span>uto <span>S</span>ales   provides the fastest, easiest and most user friendly way to buy or sell cars online. Find a Great Price on the Vehicle You Want</p>
+            <div class="homebuttons">
+
+              <RouterLink  class="nav-link " to="/register">                  
+                    <button>Register</button>
+              </RouterLink>
+              <RouterLink  class="nav-link " to="/login">                  
+                    <button>Login</button>
+              </RouterLink>
+              
+            </div>
+        </div>
+        
+
       </div>
+
+      <div class="homeimage">
+        <img src="@/assets/images/home.jpg" alt="">
+      </div>
+       
     </div>
 </template>
 
 <style>
 /* Add any component specific styles here */
+@import '../assets/css/home.css';
 </style>

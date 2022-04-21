@@ -1,0 +1,129 @@
+//FONTS
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Kreon&family=Lora&family=Prompt&family=Rokkitt&family=Source+Sans+Pro&family=Ubuntu&display=swap');
+/*
+font-family: 'Cabin', sans-serif;
+font-family: 'Kreon', serif;
+font-family: 'Lora', serif;
+font-family: 'Prompt', sans-serif;
+font-family: 'Rokkitt', serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+
+
+//VARIABLES
+$input_box_radius: 0.5rem;
+$primary_font:'Ubuntu', sans-serif;
+$secondary_font:'Prompt', sans-serif;
+$font_size: 1.2rem;
+$border_colour_hover: lightseagreen;
+$border_colour_focus: rgb(76, 232, 188);
+$border_radius: 5px;
+
+
+
+*,*::before,*::after{
+    box-sizing:border-box;
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-color: #232323;
+    font-family: $primary_font;
+    height: 100vh;
+    width: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: $font_size;
+    
+}
+
+main{
+    margin-top: 50px;
+}
+
+
+.homecontainer{
+    color:cornsilk;
+    width: 90vw;
+    height: 100vh;    
+    border: 1px solid rgba(0, 255, 255, 0.267);
+    border-radius: 15px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    .homeinfo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 50px;
+
+        .homedetails{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            width: 70%;
+            p > span{
+                color: lightseagreen;
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+            
+        }
+         
+    }
+
+    .hometitles{ 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .homeimage{
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+        
+       
+    }
+
+}
+
+
+.homebuttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    h1{
+        text-align: center;
+    }
+
+    button{
+      
+        width: 200px;
+        border: none;
+        border-radius: $border_radius;
+        padding-left: 10px;
+        padding-right: 10px;
+        transition: background-color 150ms ease-in;
+        &:hover{
+            background-color: lightseagreen;
+        }
+    }
+
+}

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topbar{
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 50px;
+    justify-content: center; 
+    gap: 20px;
+
+    
+    #exploretitle{
+        color: azure;
+    } 
+
+    form > button > img{
+        width: 20px;
+        height: auto;
+    }
+}
+
+
+.explorecontainer{
+    display: grid;
+    grid-template-columns: 1fr; 
+    width: 90%; 
+}
+
+.listresults{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.card{
+    width: 400px;
+    height: auto;
+    border: 1px solid rgba(245, 245, 245, 0.689);
+    border-radius: 5px;
+    background-color: #191919;
+    overflow: hidden;
+    justify-self: center;
+
+    img{ 
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .description{
+        width: 100%; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        .info{
+            display: grid; 
+            grid-template-columns: 2fr 3fr;
+            grid-auto-rows: auto;
+            grid-gap: 2px; 
+            justify-items: stretch;
+            width: 100%;
+            font-family: 'Ubuntu Condensed', sans-serif;
+            font-size: 20px;
+            color: cornsilk;
+
+            #left{
+                justify-self: start;
+            }
+            #price{
+                background-color: lightseagreen;
+                border-radius: 5px;
+                padding-left:5px;
+                padding-right: 5px;
+                justify-self: end;
+            }
+            #priceicon{
+                width: 20px;
+                height: auto;
+            }
+            p{
+                justify-self: left;
+            }
+        }
+
+        #carmodel{
+            width: 100%;
+            display: flex;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 25px;
+            color: lightseagreen;
+        }
+
+    }
+    button{
+        border: none;
+        border-radius: 5px;
+        background-color: lightseagreen;
+        width: auto;
+        height: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+#search{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr) 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 20px;  
+    width: 100%; 
+    label{
+        color: azure;
+    }
+    .searchitems{
+        display: flex;
+        flex-direction: column;
+        gap:5px;
+    }
+
+    button{
+        align-self: flex-end;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 5px;
+        background-color: lightseagreen;
+        width: 50px;
+        height: 30px;
+    }
+    input{
+        border-color: lightseagreen;
+        border-radius: 10px;
+        padding-left: 20px;
+    }
+
+}

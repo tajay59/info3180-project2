@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #232323;
+}
+
+#addcar_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 10fr;
+      grid-template-rows: 1fr 10fr;
+  grid-gap: 40px;
+}
+
+#addcar_container input {
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+#addcar_container select {
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+#addcar_container h1 {
+  color: lightseagreen;
+  width: 300px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+#addcar_container form {
+  justify-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 300px;
+  gap: 15px;
+}
+
+#addcar_container form #newcar {
+  font-family: 'Ubuntu', sans-serif;
+  color: lightblue;
+}
+
+#addcar_container form label {
+  color: azure;
+}
+
+#addcar_container form .groupone {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 15px;
+}
+
+#addcar_container form .descriptionbox {
+  width: 100%;
+  height: 100px;
+}
+
+#addcar_container form .filestyle {
+  position: relative;
+  width: 100%;
+}
+
+#addcar_container form .filestyle #photo {
+  width: 100%;
+}
+
+#addcar_container form .filestyle .photoerror {
+  position: absolute;
+  top: 6px;
+  left: 400px;
+}
+
+.addcarbtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.addcarbtn .addcarbutton {
+  width: 300px;
+}
+
+/*
+.addcardescription{
+    width: 655px;
+}*/
+option {
+  background-color: #232323;
+}
+
+option:focus {
+  background-color: lightseagreen;
+  color: lightcoral;
+}
+
+option:active {
+  background-color: #bf2222;
+}
+/*# sourceMappingURL=addcar.css.map */

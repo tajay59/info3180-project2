@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Kreon&family=Lora&family=Prompt&family=Rokkitt&family=Source+Sans+Pro&family=Ubuntu&display=swap");
+/*
+font-family: 'Cabin', sans-serif;
+font-family: 'Kreon', serif;
+font-family: 'Lora', serif;
+font-family: 'Prompt', sans-serif;
+font-family: 'Rokkitt', serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #232323;
+  font-family: "Ubuntu", sans-serif;
+  height: 100vh;
+  width: auto;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+}
+
+main {
+  margin-top: 50px;
+}
+
+.homecontainer {
+  color: cornsilk;
+  width: 90vw;
+  height: 100vh;
+  border: 1px solid rgba(0, 255, 255, 0.267);
+  border-radius: 15px;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+}
+
+.homecontainer .homeinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  padding: 50px;
+}
+
+.homecontainer .homeinfo .homedetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  width: 70%;
+}
+
+.homecontainer .homeinfo .homedetails p > span {
+  color: lightseagreen;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.homecontainer .hometitles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homecontainer .homeimage {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.homecontainer .homeimage img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.homebuttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homebuttons h1 {
+  text-align: center;
+}
+
+.homebuttons button {
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-transition: background-color 150ms ease-in;
+  transition: background-color 150ms ease-in;
+}
+
+.homebuttons button:hover {
+  background-color: lightseagreen;
+}
+/*# sourceMappingURL=home.css.map */

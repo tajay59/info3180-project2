@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #232323;
+}
+
+.success {
+  color: aqua;
+}
+
+.danger {
+  color: #ef2727;
+  font-size: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.registercontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: whitesmoke;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.registercontainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  max-width: 300px;
+}
+
+.registercontainer form .biographybox {
+  height: 100px;
+}
+
+.filestyle {
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: cornsilk;
+  position: relative;
+  width: 100%;
+}
+
+.filestyle #photo {
+  width: 100%;
+}
+
+.filestyle .photoerror {
+  position: absolute;
+  top: 6px;
+  left: 270px;
+}
+
+.loginsubmit {
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #191919;
+  -webkit-transition: background-color 150ms ease-in;
+  transition: background-color 150ms ease-in;
+}
+
+.loginsubmit:hover {
+  background-color: lightseagreen;
+}
+
+.registertitle {
+  color: lightseagreen;
+}
+/*# sourceMappingURL=register.css.map */

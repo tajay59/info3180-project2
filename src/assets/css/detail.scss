@@ -1,0 +1,187 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Kreon&family=Lora&family=Prompt&family=Rokkitt&family=Source+Sans+Pro&family=Ubuntu&display=swap');
+/*
+font-family: 'Cabin', sans-serif;
+font-family: 'Kreon', serif;
+font-family: 'Lora', serif;
+font-family: 'Prompt', sans-serif;
+font-family: 'Rokkitt', serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+
+
+*{
+    box-sizing: border-box;
+}
+
+#carprofile{
+    width: 100%;
+    height: 500px;
+    border: 1px solid coral;
+    border-radius: 10px;
+    color:white;
+    overflow: hidden;
+    .carcard{
+        width: 100%;
+        height: 100%;
+        background-color: #191919;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap:20px;
+
+        .params{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: auto;
+            font-size: 12px;
+            border: 1px solid lightseagreen;
+            border-radius: 5px;
+            padding: 10px;
+            grid-gap:10px;
+            span{
+                font-weight: bold;
+                color: lightskyblue;
+                font-family: 'Prompt', sans-serif;
+            }
+        }
+
+
+        #carimage{
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            overflow: hidden;
+            img{
+                object-fit: cover;
+                width: 100%; 
+            }
+        }
+
+        #carprofileinfo{
+            color: white;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+            padding: 20px;
+
+            .carinformation{
+                h1{
+                    margin-bottom: 4px;
+                    color: lightseagreen;
+                    font-family: 'Ubuntu Condensed', sans-serif;
+                }
+                h4{
+                    margin-bottom: 4px;
+                    color: lightskyblue;
+                    font-family: 'Ubuntu Condensed', sans-serif;
+
+                }
+                #paramsitem{
+                    display: flex;  
+                    flex-wrap: wrap;
+                    gap:10px;
+                }
+            }
+            
+
+            #cardescription{
+                height: auto;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            #contact{
+                display: flex;
+                width: 100%;  
+                justify-content: space-between;
+                button{
+                    align-self: flex-end;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: lightseagreen;
+                    width: auto;
+                    height: 30px;                    
+                    padding-left: 10px;
+                    padding-right: 10px;
+
+                    span{
+                        font-size: 60%;
+                        font-weight: bold;
+                    }
+                }
+
+                img{
+                    cursor: pointer;
+                    width: 30px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+.favourites{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.card{
+    width: 400px;
+    height: auto;
+    border: 1px solid rgba(245, 245, 245, 0.689);
+    border-radius: 5px;
+    background-color: #191919;
+    overflow: hidden;
+    justify-self: center;
+
+    img{ 
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .description{
+        width: 100%; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        .info{
+            display: grid; 
+            grid-template-columns: 2fr 3fr;
+            grid-auto-rows: auto;
+            grid-gap: 2px; 
+            justify-items: stretch;
+            width: 100%;
+            font-family: 'Ubuntu Condensed', sans-serif;
+            font-size: 20px;
+            color: cornsilk;
+
+            #left{
+                justify-self: start;
+            }
+            
+        }
+
+        #carmodel{
+            width: 100%;
+            display: flex;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 25px;
+            color: lightseagreen;
+        }
+
+    }
+    button{
+        border: none;
+        border-radius: 5px;
+        background-color: lightseagreen; 
+        height: 30px;
+    }
+}

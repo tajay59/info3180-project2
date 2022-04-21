@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Kreon&family=Lora&family=Prompt&family=Rokkitt&family=Source+Sans+Pro&family=Ubuntu&display=swap");
+/*
+font-family: 'Cabin', sans-serif;
+font-family: 'Kreon', serif;
+font-family: 'Lora', serif;
+font-family: 'Prompt', sans-serif;
+font-family: 'Rokkitt', serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#carprofile {
+  width: 100%;
+  height: 500px;
+  border: 1px solid coral;
+  border-radius: 10px;
+  color: white;
+  overflow: hidden;
+}
+
+#carprofile .carcard {
+  width: 100%;
+  height: 100%;
+  background-color: #191919;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+}
+
+#carprofile .carcard .params {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  font-size: 12px;
+  border: 1px solid lightseagreen;
+  border-radius: 5px;
+  padding: 10px;
+  grid-gap: 10px;
+}
+
+#carprofile .carcard .params span {
+  font-weight: bold;
+  color: lightskyblue;
+  font-family: 'Prompt', sans-serif;
+}
+
+#carprofile .carcard #carimage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  overflow: hidden;
+}
+
+#carprofile .carcard #carimage img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+#carprofile .carcard #carprofileinfo {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+
+#carprofile .carcard #carprofileinfo .carinformation h1 {
+  margin-bottom: 4px;
+  color: lightseagreen;
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+#carprofile .carcard #carprofileinfo .carinformation h4 {
+  margin-bottom: 4px;
+  color: lightskyblue;
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+#carprofile .carcard #carprofileinfo .carinformation #paramsitem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+#carprofile .carcard #carprofileinfo #cardescription {
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#carprofile .carcard #carprofileinfo #contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#carprofile .carcard #carprofileinfo #contact button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  border-radius: 5px;
+  background-color: lightseagreen;
+  width: auto;
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#carprofile .carcard #carprofileinfo #contact button span {
+  font-size: 60%;
+  font-weight: bold;
+}
+
+#carprofile .carcard #carprofileinfo #contact img {
+  cursor: pointer;
+  width: 30px;
+  height: auto;
+}
+
+.favourites {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.card {
+  width: 400px;
+  height: auto;
+  border: 1px solid rgba(245, 245, 245, 0.689);
+  border-radius: 5px;
+  background-color: #191919;
+  overflow: hidden;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card .description {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+.card .description .info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 3fr;
+      grid-template-columns: 2fr 3fr;
+  grid-auto-rows: auto;
+  grid-gap: 2px;
+  justify-items: stretch;
+  width: 100%;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 20px;
+  color: cornsilk;
+}
+
+.card .description .info #left {
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.card .description #carmodel {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 25px;
+  color: lightseagreen;
+}
+
+.card button {
+  border: none;
+  border-radius: 5px;
+  background-color: lightseagreen;
+  height: 30px;
+}
+/*# sourceMappingURL=detail.css.map */

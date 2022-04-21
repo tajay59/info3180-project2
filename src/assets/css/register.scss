@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+$input_box_radius: 5px;
+$border_colour_hover: lightseagreen; 
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    background-color: #232323;
+}
+
+.success{
+    color: aqua;
+}
+
+.danger{
+    color : rgb(239, 39, 39);
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.registercontainer{ 
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center; 
+
+    
+
+    form{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+        max-width: 300px;
+
+        .biographybox{
+            height: 100px;
+        }
+    }
+   
+
+}
+
+
+.filestyle{
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: cornsilk;
+
+
+    position: relative;
+    width: 100%;
+    #photo{
+        width: 100%;
+    }
+
+    .photoerror{
+        position: absolute;
+        top:6px;
+        left:270px;
+    }
+}
+
+.loginsubmit{ 
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    border-radius: $input_box_radius;
+    font-weight: bold;
+    color: #191919; 
+    transition: background-color 150ms ease-in;
+    &:hover{
+        background-color: $border_colour_hover; 
+    }
+}
+
+
+.registertitle{
+    color: $border_colour_hover;
+}
+

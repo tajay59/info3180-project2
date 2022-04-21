@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #232323; 
+}
+
+#addcar_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10fr; 
+    grid-gap:40px;
+
+    input{
+        padding-left: 10px;
+        border-radius: 5px;
+    }
+
+    select{
+        border-radius: 5px;
+        padding-left: 10px;
+
+    }
+
+    h1{
+        color: lightseagreen;
+        width: 300px;
+        justify-self: center;
+    }
+
+    form{
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        min-width: 300px;
+        gap:15px;
+
+        #newcar{
+            font-family: 'Ubuntu', sans-serif;
+            color: lightblue;
+            
+
+        }
+
+        label{
+            color: azure;
+        }
+
+        .groupone{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            grid-gap:15px; 
+        }
+
+        .descriptionbox{
+            width: 100%;
+            height: 100px;
+        }
+
+        .filestyle{
+            position: relative;
+            width: 100%;
+            #photo{
+                width: 100%;
+            }
+
+            .photoerror{
+                position: absolute;
+                top:6px;
+                left:400px;
+            }
+        }
+    }
+  
+
+   
+}
+
+.addcarbtn{
+    display: flex;
+    justify-content: center;
+
+    .addcarbutton{
+        width: 300px;
+    }
+
+}
+/*
+.addcardescription{
+    width: 655px;
+}*/
+
+option{
+    background-color: #232323;
+
+    &:focus{
+        background-color: lightseagreen;
+        color: lightcoral;
+    }
+}
+
+option:active{
+    background-color: #bf2222;
+}

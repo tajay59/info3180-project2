@@ -54,7 +54,7 @@ export default {
                     localStorage.removeItem("jwt_token");
                     localStorage.removeItem("user");
                     localStorage.removeItem("user_id");
-                    location.href="/"
+                    this.$router.push({name:"home"});
                                     } 
             }
 

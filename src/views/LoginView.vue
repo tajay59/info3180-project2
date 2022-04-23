@@ -53,8 +53,8 @@ export default {
                                 localStorage.setItem("username",data['user']);  
                                 localStorage.setItem("user_id",data['user_id']);    
                                 
-                                // REDIRECT TO EXPLORE PAGE SINCE LOGIN IS SUCCESSFUL
-                                location.href="/explore"; 
+                                // REDIRECT TO EXPLORE PAGE SINCE LOGIN IS SUCCESSFUL 
+                                this.$router.push("/explore");
                             }
                             else if(data['message'] === "User does not exist"){
                                 this.message = "User does not exist";

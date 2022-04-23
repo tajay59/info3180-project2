@@ -27,8 +27,8 @@ export default {
                   if (keys.includes("message")){
                      if(res.message === "Logged out successfully"){
                         this.loggedin = false;
-                        localStorage.clear();
-                        location.href = '/';
+                        localStorage.clear();                        
+                        this.$router.push({name:"home"});
                      }
                                  
                   }

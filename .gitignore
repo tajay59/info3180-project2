@@ -35,4 +35,4 @@ venv
 .env
 .flaskenv
 
-app/uploads/*
+#app/uploads/*

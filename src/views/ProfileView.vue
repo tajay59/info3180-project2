@@ -1,4 +1,5 @@
 <script>
+import { RouterLink } from "vue-router";
 export default {
     data() {
         return {
@@ -28,8 +29,9 @@ export default {
     methods:{
       details(event){            
             let user  = event.target.getAttribute("name");
-            console.log(`Details for ${user}`);
-            location.href = `/detail/${user}`;
+            console.log(`Details for ${user}`); 
+            this.$router.push(`/detail/${user}`);
+            
 
         },
         getCsrfToken(){
@@ -100,8 +102,8 @@ export default {
                 if( res['code'] === "token_expired"){
                     localStorage.removeItem("jwt_token");
                     localStorage.removeItem("user");
-                    localStorage.removeItem("user_id");
-                    location.href="/"
+                    localStorage.removeItem("user_id");                     
+                    this.$router.push({name:"home"});
                                     } 
             }
 
@@ -139,7 +141,7 @@ export default {
                     localStorage.removeItem("jwt_token");
                     localStorage.removeItem("user");
                     localStorage.removeItem("user_id");
-                    location.href="/"
+                    this.$router.push({name:"home"});
                                     } 
             }
 
@@ -147,7 +149,7 @@ export default {
                if( data['message'] === "Login successfully"){
                    this.jwt_token = data['token'];
                    localStorage.setItem("jwt_token",this.jwt_token);
-                   location.href="/"
+                   this.$router.push({name:"home"});
                }  
             }
 
@@ -166,38 +168,6 @@ export default {
             console.error('Error:', error);
             });
 
-        },
-
-        deleteAccount(){
-          console.log("ABOUT TO DELETE ACCOUNT");
-          console.log(`CSRF TOKEN IS ${this.csrf_token}`)
-          let text = "Are you sure you want to delete your account \n Either OK or Cancel.";
-          if (confirm(text) == true) {
-            text = "You pressed OK!";
-            console.log(text);
-
-            
-            let user = localStorage.getItem("user_id");
-            let token = localStorage.getItem("jwt_token");
-            let data = {"user_id":user}
-            fetch(`/api/users/delete`, { method: 'POST', body:JSON.stringify(data), headers: {'Content-Type': 'application/json','X-CSRFToken': this.csrf_token,'Authorization':`Bearer ${token}`} })
-              .then((response) => response.json())
-              .then((res) => {
-                  console.log( res);
-                  let keys = Object.keys(res);
-                  if (keys.includes("success")){
-                    console.log(res.success); 
-                    setInterval(()=>{
-                      location.href = "/logout";
-                    }) ,5000               
-                  }
-              
-              }); 
-
-          } else {
-            text = "You canceled!";
-            console.log(text);
-          }
         }
     }
 
@@ -234,7 +204,10 @@ export default {
                   <span id="joineddatediv">{{user.date_join}}</span>
                 </div>
                 <div class="deleteaccount">
-                  <button class="loginsubmit profiledeletebtn" @click="deleteAccount">Delete Account</button>
+                  <RouterLink  class="nav-link headerlinks" to="/delete"> 
+                  <button class="loginsubmit profiledeletebtn" >Delete Account</button>
+                  </RouterLink>
+                  
                 </div>
 
             </div>

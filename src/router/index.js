@@ -7,6 +7,7 @@ import AddcarView from '../views/AddcarView.vue'
 import ExploreView from '../views/ExploreView.vue'
 import ProfileView from '../views/ProfileView.vue'  
 import DetailView from '../views/DetailView.vue'
+import DeleteAccount from '../views/DeleteAccountView.vue'
 
 const requireAuth = (to, from, next) =>{   
         
@@ -30,13 +31,24 @@ const requireAuth = (to, from, next) =>{
               let keys = Object.keys(data);
               if (keys.includes("message")){
                   if (data["message"] === "User already logged in"){
-                    // console.log(`User already logged in, going to ${to.name}    from  ${from.path}`); 
+                    console.log(`User already logged in, going to ${to.name}    from  ${from.path}`); 
 
                     if(to.name == "explore"){
                       return next();
                     }
                     else if(to.name == "profile"){
                       return next();
+                    }
+                    else if(to.name === "delete"){
+                      if(from.name === "profile"){
+                        
+                      console.log('GOT DELETE REQUEST: ROUTE');
+                        return next();
+                      }
+                      else{
+                        console.log('GOT DELETE REQUEST: ROUTE TO HOME');
+                        return next({ name: "home" });
+                      }
                     }
                     else if(to.name == "addcar"){
                       return next();
@@ -45,7 +57,6 @@ const requireAuth = (to, from, next) =>{
                       return next({ name: "home" });
                     }
                     else if(to.name == "login"){ 
-                      console.log('LOGIN CALLED');
                       return next({ name: "home" });
                     }
                     else{
@@ -77,6 +88,9 @@ const requireAuth = (to, from, next) =>{
           return next( { name: 'home' });
         }
         else if(to.name == "addcar"){ 
+          return next({ name: 'home' });
+        }
+        else if(to.name == "delete"){ 
           return next({ name: 'home' });
         }
         else if(to.name == "login"){ 
@@ -162,6 +176,12 @@ const router = createRouter({
       path: '/detail/:id',
       name: 'detail',
       component: DetailView,
+      beforeEnter: requireAuth
+    },
+    {
+      path: '/delete',
+      name: 'delete',
+      component: DeleteAccount,
       beforeEnter: requireAuth
     },
     {

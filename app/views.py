@@ -31,6 +31,10 @@ jm = timezone(timedelta(hours=-5))
 # Routing for your application.
 ###
 
+@app.route('/')
+def index():
+    return send_file(join('../dist/', 'index.html'))
+
 
 @app.route('/')
 def index():
@@ -377,11 +381,13 @@ def searchbymake():
         
 
 @app.route('/api/users/delete', methods=['POST'])
+@requires_auth
 def delete_account():
     # DELETE A USER ACCOUNT
     if request.method == 'POST':
+        print(f"GOT DELETE REQUEST ")
         user_id = request.json["user_id"]        
-
+        print(f"GOT DELETE REQUEST FOR ${user_id}")
         # check if use exist before adding a favorite car
         user = UserProfile.query.filter_by(id=user_id).first()          
 
@@ -407,8 +413,11 @@ def delete_account():
             message = {"message":"Cannot delete account to a none existing user"}
             return jsonify(message)
     else:            
-            message = {"message":"Favourite delete request failed"}
+            message = {"message":"Account delete request failed"}
             return jsonify(message)
+
+
+
 
 
 @app.route('/api/images/<image_id>')

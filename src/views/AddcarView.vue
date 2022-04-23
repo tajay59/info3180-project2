@@ -42,8 +42,8 @@ export default {
                         let keys = Object.keys(data);
                         if (keys.includes("code")){
                         if( data['code'] === "token_expired"){
-                            localStorage.removeItem("jwt_token"); 
-                            location.href="/"
+                            localStorage.removeItem("jwt_token");  
+                            this.$router.push({name:"home"});
                                             } 
                         } 
                         

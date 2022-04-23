@@ -18,8 +18,9 @@ export default {
     methods:{
         details(event){            
             let user  = event.target.getAttribute("name");
-            console.log(`Details for ${user}`);
-            location.href = `/detail/${user}`;
+            console.log(`Details for ${user}`);            
+            this.$router.push( `/detail/${user}`);
+            
 
         },
         getCsrfToken(){
@@ -42,7 +43,7 @@ export default {
             if (keys.includes("code")){
                 if( data['code'] === "token_expired"){
                     localStorage.removeItem("jwt_token"); 
-                    location.href="/"
+                    this.$router.push({name:"home"});
                                     } 
             }
 
@@ -50,7 +51,7 @@ export default {
                if( data['message'] === "Login successfully"){
                    this.jwt_token = data['token'];
                    localStorage.setItem("jwt_token",this.jwt_token);
-                   location.href="/"
+                   this.$router.push({name:"home"});
                }  
             }
 
@@ -82,7 +83,7 @@ export default {
             if (keys.includes("code")){
                 if( data['code'] === "token_expired"){
                     localStorage.removeItem("jwt_token"); 
-                    location.href="/"
+                    this.$router.push({name:"home"});
                                     } 
             }
 
@@ -90,7 +91,7 @@ export default {
                if( data['message'] === "Login successfully"){
                    this.jwt_token = data['token'];
                    localStorage.setItem("jwt_token",this.jwt_token);
-                   location.href="/"
+                   this.$router.push({name:"home"});
                }  
             }
 

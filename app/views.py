@@ -37,7 +37,7 @@ def index():
 
 
 @app.route('/')
-def index():
+def index_vue():
     return jsonify(message="This is the beginning of our API")
 
 

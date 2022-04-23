@@ -3,9 +3,22 @@ import { RouterLink } from "vue-router";
 export default {
     data() {
         return {
-            message: "Home of United Auto Sales"
+            loggedin:false
         };
     },
+    created(){
+      this.checkloggedin();
+      console.log(`LOGGEDIN SATE ${this.loggedin}`)
+    },
+    methods:{
+      checkloggedin(){
+        this.loggedin = false;
+        if(localStorage.jwt_token){ 
+          this.loggedin = true;
+        }
+        
+    }
+}
 }
 </script>
 
@@ -20,11 +33,11 @@ export default {
             <p class="homedescription"> <span>U</span>nited <span>A</span>uto <span>S</span>ales   provides the fastest, easiest and most user friendly way to buy or sell cars online. Find a Great Price on the Vehicle You Want</p>
             <div class="homebuttons">
 
-              <RouterLink  class="nav-link " to="/register">                  
-                    <button>Register</button>
+              <RouterLink  v-if="!loggedin" class="nav-link " to="/register">                  
+                    <button >Register</button>
               </RouterLink>
-              <RouterLink  class="nav-link " to="/login">                  
-                    <button>Login</button>
+              <RouterLink  v-if="!loggedin" class="nav-link " to="/login">                  
+                    <button  >Login</button>
               </RouterLink>
               
             </div>

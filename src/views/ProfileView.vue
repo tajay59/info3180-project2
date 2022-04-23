@@ -185,13 +185,13 @@ export default {
               .then((res) => {
                   console.log( res);
                   let keys = Object.keys(res);
-                      if (keys.includes("success")){
-                        console.log(res.success); 
-                        setInterval(()=>{
-                          location.href = "/logout";
-                        }) ,5000               
-                      }
-                  
+                  if (keys.includes("success")){
+                    console.log(res.success); 
+                    setInterval(()=>{
+                      location.href = "/logout";
+                    }) ,5000               
+                  }
+              
               }); 
 
           } else {
@@ -211,8 +211,7 @@ export default {
          <div class="profilecard">
            
             <div id="profileimage">
-              <img :src="user.photo" alt="">
-                
+              <img :src="user.photo" alt="">                
             </div>
 
             <div id="profileinfo">

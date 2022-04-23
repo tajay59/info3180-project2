@@ -169,9 +169,9 @@ export default {
          <div class="carcard">
            
            <div id="carimage">
-             <img :src="car.photo" alt="">
-               
+             <img :src="car.photo" alt="">               
            </div>
+           
            <div id="carprofileinfo">
              <div class="carinformation">
                 <h1 id="name">{{car.year}} {{car.make}}</h1> 
@@ -193,7 +193,7 @@ export default {
 
                     <div id="paramsitem"> 
                       <label for="price">Price</label>
-                      <span id="price">{{car.price}}</span>
+                      <span id="price">{{car.price.toLocaleString('en-US', {style: 'currency',  currency: 'USD',})}}</span>
                     </div>
 
                     <div id="paramsitem"> 

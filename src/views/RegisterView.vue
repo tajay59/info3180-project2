@@ -121,27 +121,27 @@ export default {
         <hr>
         <form   @submit.prevent="submitform" id="registrationForm">
             <div class="loginformitems">                 
-                <input id="username" type="text" name="username" class="loginformitems__input" placeholder=" ">
+                <input id="username" type="text" name="username" class="loginformitems__input" placeholder=" " maxlength="80">
                 <label for="username" class="loginformitems__label" placeholder=" " >Username</label>
                 <h6 v-if=" (username && error)"      class="danger erroritem">required!</h6>
             </div>
             <div class="loginformitems">                
-                <input id="name" type="text" name="name" class="loginformitems__input" placeholder=" " >
+                <input id="name" type="text" name="name" class="loginformitems__input" placeholder=" " maxlength="80" >
                 <label for="name" class="loginformitems__label" placeholder=" " >Name</label>
                 <h6 v-if=" (name && error)"      class="danger erroritem">required!</h6>
             </div>
             <div class="loginformitems">                
-                <input id="email" type="email" name="email" class="loginformitems__input" placeholder=" ">   
+                <input id="email" type="email" name="email" class="loginformitems__input" placeholder=" " maxlength="80">   
                 <label for="email" class="loginformitems__label" placeholder=" "  >Email</label>
                 <h6 v-if="(email && error)"      class="danger erroritem">required!</h6>
             </div>
             <div class="loginformitems">                
-                <input id="location" type="text" name="location" class="loginformitems__input" placeholder=" ">
+                <input id="location" type="text" name="location" class="loginformitems__input" placeholder=" " maxlength="80">
                 <label for="location" class="loginformitems__label" placeholder=" " >Location</label>
                 <h6 v-if="(location && error)"      class="danger erroritem">required!</h6>
             </div>
             <div class="loginformitems biographybox">                
-                <textarea name="biography" id="biography" cols="30" rows="3" class="loginformitems__input" placeholder=" "></textarea>  
+                <textarea name="biography" id="biography" cols="30" rows="3" class="loginformitems__input" placeholder=" " maxlength="1000"></textarea>  
                 <label for="biography" class="loginformitems__label" placeholder=" " >Biography</label>       
                 <h6 v-if="(biography && error)"      class="danger erroritem">required!</h6>        
             </div>
@@ -150,7 +150,7 @@ export default {
                 <h6 v-if="(photo && error)"      class="danger erroritem photoerror">required!</h6>
             </div>
             <div class="loginformitems">                
-                <input id="password" type="password" name="password" class="loginformitems__input" placeholder=" ">
+                <input id="password" type="password" name="password" class="loginformitems__input" placeholder=" " maxlength="80">
                 <label for="password" name="username" class="loginformitems__label" placeholder=" ">Password</label>
                 <h6 v-if="(password && error)"      class="danger erroritem">required!</h6>
             </div>

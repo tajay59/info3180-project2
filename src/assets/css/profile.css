@@ -21,13 +21,12 @@ font-family: 'Ubuntu', sans-serif;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-width: 1500px;
+  width: 100%;
   gap: 50px;
 }
 
 #profile {
   width: 100%;
-  height: 300px;
   border: 1px solid coral;
   border-radius: 10px;
   color: white;
@@ -81,7 +80,11 @@ font-family: 'Ubuntu', sans-serif;
   -ms-grid-columns: 1fr 6fr;
       grid-template-columns: 1fr 6fr;
   font-family: 'Prompt', sans-serif;
-  font-size: 15px;
+  font-size: 12px;
+}
+
+#profile .profilecard #profileinfo #biography {
+  font-size: 12px;
 }
 
 #profile .profilecard #profileinfo #name {
@@ -106,6 +109,7 @@ font-family: 'Ubuntu', sans-serif;
       -ms-flex-align: end;
           align-items: flex-end;
   width: 150px;
+  margin: 0;
 }
 
 #favorited > h1 {

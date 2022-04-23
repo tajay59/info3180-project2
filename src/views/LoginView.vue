@@ -112,13 +112,13 @@ export default {
         <form  id="loginForm" @submit.prevent="userLogin">
 
                 <div class="loginformitems">                    
-                    <input type="text" name="username" class="loginformitems__input" placeholder=" ">
+                    <input type="text" name="username" class="loginformitems__input" placeholder=" " maxlength="20">
                     <label for="username" class="loginformitems__label">Username</label>
                     <h6 v-if="(username && error)"      class="danger erroritem">required!</h6>
                 </div>
 
                 <div class="loginformitems">                    
-                    <input type="password" name="password" class="loginformitems__input" placeholder=" ">
+                    <input type="password" name="password" class="loginformitems__input" placeholder=" " maxlength="40">
                     <label for="password" class="loginformitems__label">Password</label>
                     <h6 v-if="(password && error)"      class="danger erroritem">required!</h6>
                 </div>

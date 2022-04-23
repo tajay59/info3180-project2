@@ -108,6 +108,10 @@ font-family: 'Ubuntu', sans-serif;
   gap: 10px;
 }
 
+#carprofile .carcard #carprofileinfo .carinformation p {
+  font-size: 12px;
+}
+
 #carprofile .carcard #carprofileinfo #cardescription {
   height: auto;
   margin-top: 20px;

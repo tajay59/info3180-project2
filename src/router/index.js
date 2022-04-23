@@ -11,56 +11,86 @@ import DetailView from '../views/DetailView.vue'
 const requireAuth = (to, from, next) =>{   
         
     // GET CSRF TOKEN
+    /*
     let csrf_token = "";
     fetch('/api/csrf-token')
         .then((response) => response.json())
         .then((data) => {
             console.log(`CSRF response ${data}`);
             csrf_token = data.csrf_token;
-        });
+        });*/
 
     if(localStorage.jwt_token){
-      let token = localStorage.getItem("jwt_token");
-      fetch('/api/jwt-token',{ method: 'GET',headers: {'X-CSRFToken': csrf_token,'Authorization':`Bearer ${token}`} })
+      let token = localStorage.getItem("jwt_token"); 
+
+      
+      fetch('/api/jwt-token',{ method: 'GET',headers: {'Authorization':`Bearer ${token}`} })  // ,headers: {'X-CSRFToken': csrf_token,'Authorization':`Bearer ${token}`}
             .then((response) => response.json())
             .then((data) => {
               let keys = Object.keys(data);
               if (keys.includes("message")){
                   if (data["message"] === "User already logged in"){
-                    console.log("User already logged in"); 
+                    // console.log(`User already logged in, going to ${to.name}    from  ${from.path}`); 
 
-                    if(to.name == "/explore"){
-                      next({ name: 'explore' });
+                    if(to.name == "explore"){
+                      return next();
                     }
-                    else if(to.name == "/profile"){
-                      next({ name: 'profile' });
+                    else if(to.name == "profile"){
+                      return next();
                     }
-                    else if(to.name == "/addcar"){
-                      next({ name: 'addcar' });
+                    else if(to.name == "addcar"){
+                      return next();
+                    }
+                    else if(to.name == "register"){ 
+                      return next({ name: "home" });
+                    }
+                    else if(to.name == "login"){ 
+                      console.log('LOGIN CALLED');
+                      return next({ name: "home" });
                     }
                     else{
-                      next()
+                      return next()
                     } 
                   } 
               }else if (keys.includes("code")){
                 if(localStorage.jwt_token) {
-                  localStorage.removeItem("jwt_token");
-                  localStorage.removeItem("user");
-                  localStorage.removeItem("user_id");
+                  localStorage.clear();
                 }
-                 next({ name: 'login' });
+                return next({ name: 'login' });
               }
               else{
-                next({ name: 'login' });
+                return next({ name: 'login' });
               }
 
+            }).catch((error) => {
+              console.error('Error:', error);
+              return next({ name: 'home' });
             }); 
     }
     else{
-      next('/login')
+      //console.log(`User NOT logged in, going to ${to.name}   from  ${from.name}`); 
+        localStorage.clear(); 
+        if(to.name == "explore"){ 
+          return next({ name: 'home' });
+        }
+        else if(to.name == "profile"){ 
+          return next( { name: 'home' });
+        }
+        else if(to.name == "addcar"){ 
+          return next({ name: 'home' });
+        }
+        else if(to.name == "login"){ 
+          return next();
+        }
+        else if(to.name == "register"){ 
+          return next();
+        } 
     }
 
+    
+
   } 
+
 
   const logout= (to, from, next) =>{
 
@@ -70,9 +100,7 @@ const requireAuth = (to, from, next) =>{
       
       if(localStorage.jwt_token){
 
-            localStorage.removeItem("jwt_token");
-            localStorage.removeItem("user");
-            localStorage.removeItem("user_id");
+            localStorage.clear();
             next({ name: 'login' });
           } 
           else{
@@ -81,6 +109,11 @@ const requireAuth = (to, from, next) =>{
         
   }
 
+
+
+
+
+  
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -92,18 +125,20 @@ const router = createRouter({
     },{
       path: '/register',
       name: 'register',
-      component: RegisterView
+      component: RegisterView,
+      beforeEnter: requireAuth
     },
     {
       path: '/login',
       name:'login',
-      component: LoginView
+      component: LoginView,
+      beforeEnter: requireAuth
     },
     {
       path: '/logout',
       name:'logout',
       component: LogoutView,
-      beforeEnter: logout
+      /*beforeEnter: logout*/
     },  
     {
       path:"/explore",

@@ -117,27 +117,27 @@ export default {
             <div class="groupone">
 
                     <div class="loginformitems">                
-                        <input id="make" type="text" name="make" class="loginformitems__input"  placeholder=" ">
+                        <input id="make" type="text" name="make" class="loginformitems__input"  placeholder=" " maxlength="80">
                         <label for="make" class="loginformitems__label" >Make</label>
                         <h6 v-if="(make && error)"      class="danger erroritem">required!</h6>
                     </div>
                     <div class="loginformitems">
-                        <input type="text" name="model" class="loginformitems__input"  placeholder=" ">
+                        <input type="text" name="model" class="loginformitems__input"  placeholder=" " maxlength="80">
                         <label for="model" class="loginformitems__label">Model</label>
                         <h6 v-if="(model && error)"      class="danger erroritem">required!</h6>
                     </div>
                     <div class="loginformitems">                
-                        <input id="colour" type="text" name="colour" class="loginformitems__input"  placeholder=" ">
+                        <input id="colour" type="text" name="colour" class="loginformitems__input"  placeholder=" " maxlength="80">
                         <label for="colour" class="loginformitems__label" >Colour</label>
                         <h6 v-if="(colour && error)"      class="danger erroritem">required!</h6>
                     </div>
                     <div class="loginformitems">                
-                        <input id="year" type="text" name="year" class="loginformitems__input"  placeholder=" ">
+                        <input id="year" type="text" name="year" class="loginformitems__input"  placeholder=" " maxlength="4">
                         <label for="year" class="loginformitems__label">Year</label>
                         <h6 v-if="(year && error)"      class="danger erroritem">required!</h6>
                     </div>
                     <div class="loginformitems">                
-                        <input id="price" type="text" name="price" class="loginformitems__input"  placeholder=" ">
+                        <input id="price" type="text" name="price" class="loginformitems__input"  placeholder=" " maxlength="80">
                         <label for="price" class="loginformitems__label">Price</label>
                         <h6 v-if="(price && error)"      class="danger erroritem">required!</h6>
                     </div>
@@ -162,7 +162,7 @@ export default {
             </div>
             
             <div class="loginformitems descriptionbox">                
-                <textarea name="description" id="description" cols="30" rows="3" class="loginformitems__input addcardescription"  placeholder=" "></textarea>
+                <textarea name="description" id="description" cols="30" rows="3" class="loginformitems__input addcardescription"  placeholder=" " maxlength="1000"></textarea>
                 <label for="description" class="loginformitems__label">Description</label>
                 <h6 v-if="(description && error)"      class="danger erroritem">required!</h6>
             </div> 

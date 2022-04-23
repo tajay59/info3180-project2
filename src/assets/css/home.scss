@@ -40,9 +40,20 @@ body{
     
 }
 
-main{
-    margin-top: 50px;
+#app{
+    width: 1400px;
+    height: 100vh;
 }
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width:100%;
+}
+
+
 
 
 .homecontainer{

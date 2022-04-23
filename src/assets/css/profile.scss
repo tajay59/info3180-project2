@@ -17,14 +17,13 @@ font-family: 'Ubuntu', sans-serif;
 .usercontainer{
     display: flex;
     flex-direction: column;
-    min-width: 1500px;
+    width: 100%;
     gap:50px;
 }
 
 
 #profile{
-    width: 100%;
-    height: 300px;
+    width: 100%; 
     border: 1px solid coral;
     border-radius: 10px;
     color:white;
@@ -40,7 +39,7 @@ font-family: 'Ubuntu', sans-serif;
         #profileimage{
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: center; 
             img{
                 width: 200px;
                 height: 200px;
@@ -59,7 +58,10 @@ font-family: 'Ubuntu', sans-serif;
                 display: grid;
                 grid-template-columns: 1fr 6fr;  
                 font-family: 'Prompt', sans-serif;
-                font-size: 15px;
+                font-size: 12px;
+            }
+            #biography{
+                font-size: 12px;
             }
 
             #name{
@@ -75,6 +77,7 @@ font-family: 'Ubuntu', sans-serif;
                     justify-content: flex-end;
                     align-items: flex-end;
                     width: 150px;
+                    margin: 0;
                 }
             }
             

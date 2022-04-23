@@ -9,37 +9,39 @@ export default {
     },
 
     created(){
-      //this.logout();
+      this.logout();
     },
 
-    method:{
+    methods:{
 
       logout(){
-
-            this.loggedin = false;
-
+            console.log("logout in progress"); 
+             
             if(localStorage.jwt_token){
-                this.loggedin = false;
-                localStorage.removeItem("jwt_token");
-                localStorage.removeItem("user");
-                localStorage.removeItem("user_id");
-                location.href = '/';
+              let token = localStorage.getItem("jwt_token"); 
+              fetch('/api/auth/logout',{  headers: {'Authorization':`Bearer ${token}`}})
+              .then((response) => response.json())
+              .then((res) => {
+
+                  let keys = Object.keys(res);
+                  if (keys.includes("message")){
+                     if(res.message === "Logged out successfully"){
+                        this.loggedin = false;
+                        localStorage.clear();
+                        location.href = '/';
+                     }
+                                 
+                  }
+              });
+                
             }       
-      }
-      ,
-      test(){
-
-          console.log("logout in progress");
-
-      }
+      } 
     }
 }
 </script>
 
-<template>
-    <div class="logoutcontainer">
-      <h1 @loggingrule="test" > {{ message }}</h1>
-    </div>
+<template> 
+
 </template>
 
 <style>

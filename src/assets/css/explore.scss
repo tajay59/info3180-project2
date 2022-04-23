@@ -5,12 +5,7 @@
     box-sizing: border-box;
 }
 
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+ 
 .topbar{
     display: flex;
     flex-direction: column; 
@@ -38,8 +33,9 @@ main{
 
 .listresults{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, 400px);
     grid-gap: 20px;
+    width: 100%;
 }
 
 .card{

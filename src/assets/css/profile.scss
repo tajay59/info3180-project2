@@ -10,10 +10,7 @@ font-family: 'Source Sans Pro', sans-serif;
 font-family: 'Ubuntu', sans-serif;
 */
 
-*{
-    box-sizing: border-box;
-}
-
+ 
 .usercontainer{
     display: flex;
     flex-direction: column;
@@ -91,7 +88,7 @@ font-family: 'Ubuntu', sans-serif;
 
 #favourites{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, 400px);
     grid-gap: 20px;
 
     

@@ -35,11 +35,11 @@ jm = timezone(timedelta(hours=-5))
 def index():
     return send_file(join('../dist/', 'index.html'))
 
-
+'''
 @app.route('/')
 def index_vue():
     return jsonify(message="This is the beginning of our API")
-
+'''
 
 # Create a JWT @requires_auth decorator
 # This decorator can be used to denote that a specific route should check

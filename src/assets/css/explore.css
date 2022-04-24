@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 .topbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,7 +29,7 @@
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  width: 90%;
+  width: 100%;
 }
 
 .listresults {

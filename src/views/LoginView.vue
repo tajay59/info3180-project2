@@ -107,8 +107,11 @@ export default {
     <div class="logincontainer">
 
         <h1>Login</h1>
-        <h4 v-if="displayMessage" :class="{logindanger: danger, loginsuccess: success}" >{{message}}</h4>
+        <div v-if="displayMessage" :class="{dangermessage: danger, successmessage: success}" >
+            <h4  >{{message}}</h4>
+        </div>        
         <hr>
+        
         <form  id="loginForm" @submit.prevent="userLogin">
 
                 <div class="loginformitems">                    

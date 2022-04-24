@@ -73,7 +73,7 @@ export default {
                     console.log(res.success); 
                     this.deleted = true; 
                     localStorage.clear();
-                    this.$router.push({ name: "home"});     
+                    setTimeout(()=>{this.$router.push({ name: "home"});  },5000);
                       
                   }else{
                     console.log(res)
@@ -91,7 +91,10 @@ export default {
 </script>
 
 <template> 
-  <h1 v-if="deleted" :class="{danger:deleted}">{{message}}</h1>
+  <div v-if="deleted" :class="{dangermessage:deleted}" >
+    <h6 >{{message}}</h6>
+  </div>
+  
 
 </template>
 
@@ -107,9 +110,6 @@ h1{
     color: lightseagreen;
   }
 
-body{
-  width: 100vw;
-  height: 100vh;
-}
+ 
 
 </style>

@@ -28,29 +28,37 @@ $border_radius: 5px;
     padding: 0;
 }
 
-body{
+html{  
+    margin:0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;  
+    overflow-x: hidden;
+}
+
+body{  
     background-color: #232323;
-    font-family: $primary_font;
-    height: 100vh;
-    width: auto;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    font-size: $font_size;
-    
-}
-
-#app{
-    width: 1400px;
-    height: 100vh;
-}
-
-main{
+    margin-top: 15vh;
+    font-family: $primary_font;    
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    width:100%;
+    font-size: $font_size;  
+    height: 100%;
+    width: 100%; 
+
+    
+}
+
+#app{ 
+    width: 90%;
+    height: 100%;
+}
+
+main{  
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
 
 
@@ -58,7 +66,7 @@ main{
 
 .homecontainer{
     color:cornsilk;
-    width: 90vw;
+    width: 100vw;
     height: 100vh;    
     border: 1px solid rgba(0, 255, 255, 0.267);
     border-radius: 15px;
@@ -73,31 +81,36 @@ main{
         gap: 20px;
         padding: 50px;
 
+        
         .homedetails{
             display: flex;
             flex-direction: column;
             gap:20px;
-            width: 70%;
+            width: 100%;
             p > span{
                 color: lightseagreen;
                 font-size: 25px;
                 font-weight: bold;
             }
 
-            
+                       
         }
          
     }
 
-    .hometitles{ 
+    .hometitles{  
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%; 
+        h1{
+            font-size: 2em;
+            padding: 0;
+        }
     }
 
-    .homeimage{
-        overflow: hidden;
+    .homeimage{ 
         display: flex;
         justify-content: center;
         align-items: stretch;
@@ -136,5 +149,46 @@ main{
             background-color: lightseagreen;
         }
     }
+
+}
+
+.success{
+    width: 100%;
+    background-color: rgba(0, 255, 255, 0.35);
+    color: lightseagreen;
+}
+
+.danger{
+    width: 100%;
+    color : rgb(239, 39, 39);
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.successmessage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid greenyellow;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 255, 255, 0.385);
+    color: cornsilk;
+}
+
+.dangermessage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0.35);
+    width: 100%;
+    height: 50px;
+    color : cornsilk;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
 
 }

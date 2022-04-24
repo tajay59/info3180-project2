@@ -14,8 +14,5 @@ import AppFooter from "@/components/AppFooter.vue";
   <AppFooter />
 </template>
 
-<style>
-body {
-  padding-top: 75px;
-}
+<style> 
 </style>

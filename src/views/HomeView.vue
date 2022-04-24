@@ -7,8 +7,7 @@ export default {
         };
     },
     created(){
-      this.checkloggedin();
-      console.log(`LOGGEDIN SATE ${this.loggedin}`)
+      this.checkloggedin(); 
     },
     methods:{
       checkloggedin(){
@@ -23,6 +22,7 @@ export default {
 </script>
 
 <template>
+
     <div class="homecontainer">
       <div class="homeinfo"> 
         <div class="homedetails">
@@ -51,6 +51,7 @@ export default {
       </div>
        
     </div>
+    
 </template>
 
 <style>

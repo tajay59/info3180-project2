@@ -44,12 +44,20 @@ export default {
             fetch('/api/register', { method: 'POST', body: form_data ,headers: {'X-CSRFToken': this.csrf_token}})
             .then(response => response.json())
             .then(res => { 
-            console.log( res);
-                let keys = Object.keys(res);
+                    console.log( res);
+                    let keys = Object.keys(res);
+                    // Scroll page up
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                    // Reset form field
+                    uploadForm.reset();
+                    
                     if (keys.includes("message")){
-                        
+                        const allinput = document.querySelectorAll('.loginformitems__input');
+                        allinput.value = "" ;
 
                         if( res.message == "New user profile created"){ 
+                            
                             this.newuseradded = true; 
                             setTimeout(()=>{this.newuseradded = false;},5000);
                             
@@ -114,9 +122,15 @@ export default {
 <template>
     <div class="registercontainer"> 
         <h1 class="registertitle">Register New User</h1>
+        <div v-if="newuseradded"    :class="{successmessage: newuseradded}" >
+            <h6 >{{newuserprofile}}</h6>
+        </div>
+        <div v-if="alreadyexist"   :class="{dangermessage: alreadyexist}" >
+            <h6 >{{existmessage}}</h6>
+        </div>
         
-        <h6 v-if="newuseradded" id="newuser" class="success">{{newuserprofile}}</h6>
-        <h6 v-if="alreadyexist" id="newuser" class="danger">{{existmessage}}</h6>
+        
+         
         
         <hr>
         <form   @submit.prevent="submitform" id="registrationForm">

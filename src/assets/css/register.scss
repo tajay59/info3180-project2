@@ -3,24 +3,9 @@
 $input_box_radius: 5px;
 $border_colour_hover: lightseagreen; 
 
-*{
-    box-sizing:border-box;
-}
+ 
+ 
 
-body{
-    background-color: #232323;
-}
-
-.success{
-    color: aqua;
-}
-
-.danger{
-    color : rgb(239, 39, 39);
-    font-size: 20px;
-    font-family: 'Source Sans Pro', sans-serif;
-
-}
 
 .registercontainer{ 
     display: flex;

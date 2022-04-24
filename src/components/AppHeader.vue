@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="navbar navbar-expand-lg fixed-top loginnav">  <!--   navbar-dark bg-primary  -->
+    <nav class="navbar navbar-expand-lg fixed-top loginnav"> 
       <div class="container-fluid">
 
         <a class="navbar-brand  logo" href="/"  >
@@ -37,8 +37,8 @@
                 </li>
                 
               </ul>
-              <ul  class="navbar-nav ">
-                <li v-if="!loggedin" class="nav-item headerlinks registerbox">
+              <ul  class="navbar-nav loginregister">
+                <li v-if="!loggedin" class="nav-item headerlinks">
                   <RouterLink class="nav-link headerlinks" to="/register">Register</RouterLink>
                 </li>
 
@@ -114,17 +114,18 @@ export default {
 
 <style>
 /* Add any component specific styles here */
+ 
 .logginicon{
   width: 30px;
   height: auto;
 }
 
  .logo, .headerlinks{
-   display: flex;
-   flex-direction: row-reverse;
-   gap:2px;
-     font-size: 15px;
-     color: lightseagreen;
+  display: flex;
+  flex-direction: row-reverse;
+  gap:2px;
+  font-size: 15px;
+  color: lightseagreen;
     
  }
  
@@ -151,8 +152,23 @@ export default {
   width: 100%;
   justify-content: space-around;
 }
-.registerbox{
-  margin-right: 50px;
+ 
+
+.loginregister{
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
 
 }
+
+@media only screen and (max-width: 990px)  {
+  .loginregister{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+}
+  
+}
+ 
 </style>

@@ -15,13 +15,21 @@ font-family: 'Ubuntu', sans-serif;
   padding: 0;
 }
 
+html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
 body {
   background-color: #232323;
+  margin-top: 15vh;
   font-family: "Ubuntu", sans-serif;
-  height: 100vh;
-  width: auto;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -29,11 +37,13 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.2rem;
+  height: 100%;
+  width: 100%;
 }
 
 #app {
-  width: 1400px;
-  height: 100vh;
+  width: 90%;
+  height: 100%;
 }
 
 main {
@@ -46,13 +56,11 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 50px;
-  width: 100%;
 }
 
 .homecontainer {
   color: cornsilk;
-  width: 90vw;
+  width: 100vw;
   height: 100vh;
   border: 1px solid rgba(0, 255, 255, 0.267);
   border-radius: 15px;
@@ -86,7 +94,7 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
-  width: 70%;
+  width: 100%;
 }
 
 .homecontainer .homeinfo .homedetails p > span {
@@ -109,10 +117,15 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+}
+
+.homecontainer .hometitles h1 {
+  font-size: 2em;
+  padding: 0;
 }
 
 .homecontainer .homeimage {
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,5 +175,56 @@ main {
 
 .homebuttons button:hover {
   background-color: lightseagreen;
+}
+
+.success {
+  width: 100%;
+  background-color: rgba(0, 255, 255, 0.35);
+  color: lightseagreen;
+}
+
+.danger {
+  width: 100%;
+  color: #ef2727;
+  font-size: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.successmessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid greenyellow;
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 255, 255, 0.385);
+  color: cornsilk;
+}
+
+.dangermessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid red;
+  border-radius: 5px;
+  background-color: rgba(255, 0, 0, 0.35);
+  width: 100%;
+  height: 50px;
+  color: cornsilk;
+  font-size: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 /*# sourceMappingURL=home.css.map */

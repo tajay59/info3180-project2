@@ -1,23 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  background-color: #232323;
-}
-
-.success {
-  color: aqua;
-}
-
-.danger {
-  color: #ef2727;
-  font-size: 20px;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
 .registercontainer {
   display: -webkit-box;
   display: -ms-flexbox;

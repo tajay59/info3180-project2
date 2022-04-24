@@ -31,7 +31,7 @@ const requireAuth = (to, from, next) =>{
               let keys = Object.keys(data);
               if (keys.includes("message")){
                   if (data["message"] === "User already logged in"){
-                    console.log(`User already logged in, going to ${to.name}    from  ${from.path}`); 
+                    //console.log(`User already logged in, going to ${to.name}    from  ${from.path}`); 
 
                     if(to.name == "explore"){
                       return next();
@@ -41,12 +41,10 @@ const requireAuth = (to, from, next) =>{
                     }
                     else if(to.name === "delete"){
                       if(from.name === "profile"){
-                        
-                      console.log('GOT DELETE REQUEST: ROUTE');
+                         
                         return next();
                       }
-                      else{
-                        console.log('GOT DELETE REQUEST: ROUTE TO HOME');
+                      else{ 
                         return next({ name: "home" });
                       }
                     }
@@ -105,29 +103,7 @@ const requireAuth = (to, from, next) =>{
 
   } 
 
-
-  const logout= (to, from, next) =>{
-
    
-    console.log('loggingout in real progress');
-
-      
-      if(localStorage.jwt_token){
-
-            localStorage.clear();
-            next({ name: 'login' });
-          } 
-          else{
-            next({ name: 'home' });
-          }
-        
-  }
-
-
-
-
-
-  
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

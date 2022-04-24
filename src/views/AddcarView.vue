@@ -47,12 +47,20 @@ export default {
                                             } 
                         } 
                         
-                        if (keys.includes("message")){
+                        // Reset form
+                        form.reset();
+                        // Scroll page up
+                        window.scrollTo({ top: 0, behavior: 'smooth' }); 
+
+                        if (keys.includes("message")){ 
+                            
                             if( data['message'] === "New car added"){
                                 
+
+                                // Print success message on screen
                                 this.newcar = data['car'];
                                 this.newcaradded = true;
-                                setTimeout(()=>{this.newcaradded = false;},10000);                                
+                                setTimeout(()=>{this.newcaradded = false;},5000);                                
                             } 
                             else if(data['message'] === "Form errors"){
                                 let res = data["errors"]
@@ -111,7 +119,9 @@ export default {
         
         <h1>Add New Car</h1>
         <form  @submit.prevent="addcar" id="addForm">
-            <h6 v-if="newcaradded" id="newcar">{{newcar}}</h6>
+            <div v-if="newcaradded"  :class="{successmessage: newcaradded}" >
+                <h6>{{newcar}}</h6>
+            </div>
             <hr>
 
             <div class="groupone">
@@ -174,7 +184,7 @@ export default {
 
 
             <div class="addcarbtn" >
-                <button class="loginsubmit addcarbutton">Save</button>
+                <button  class="loginsubmit addcarbutton">Save</button>
             </div>
             
             
@@ -183,6 +193,6 @@ export default {
 </template>
 
 <style>
-@import '../assets/css/addcar.css'
+@import '../assets/css/addcar.css';
 /* Add any component specific styles here */
 </style>

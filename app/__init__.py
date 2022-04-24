@@ -6,6 +6,7 @@ from flask_migrate import Migrate
 from .config import Config
 from flask_wtf.csrf import CSRFProtect
 
+#app = Flask(__name__)
 app = Flask(__name__, static_folder='../dist/assets')
 app.config.from_object(Config)
 

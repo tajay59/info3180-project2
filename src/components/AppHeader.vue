@@ -17,7 +17,8 @@
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-            <span class="navbar-toggler-icon"></span>
+             
+            <img src="@/assets/images/hamburger.svg" alt="">
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -147,7 +148,7 @@ export default {
 
 .loginlogout{
   display: flex;
-  width: 200px;
+  width: 100%;
   justify-content: space-around;
 }
 </style>

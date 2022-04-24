@@ -142,7 +142,7 @@ export default {
                         <h6 v-if="(price && error)"      class="danger erroritem">required!</h6>
                     </div>
                     <div class="loginformitems">                
-                        <select  name="car_type" id="car_type" class="loginformitems__input"  placeholder=" ">
+                        <select  name="car_type" id="car_type" class="loginformitems__input"  placeholder=" " style="padding:0">
                             <option value="suv">SUV</option>
                             <option value="sedan" >Sedan</option>
                             <option value="coupe">Coupe</option>
@@ -152,7 +152,7 @@ export default {
                         
                     </div>
                     <div class="loginformitems">
-                        <select name="transmission" id="transmission" class="loginformitems__input"  placeholder=" ">
+                        <select name="transmission" id="transmission" class="loginformitems__input"  placeholder=" " style="padding:0">
                             <option value="automatic">Automatic</option>
                             <option value="manual">Manual</option> 
                         </select>

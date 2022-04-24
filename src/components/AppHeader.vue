@@ -38,7 +38,7 @@
                 
               </ul>
               <ul  class="navbar-nav ">
-                <li v-if="!loggedin" class="nav-item headerlinks">
+                <li v-if="!loggedin" class="nav-item headerlinks registerbox">
                   <RouterLink class="nav-link headerlinks" to="/register">Register</RouterLink>
                 </li>
 
@@ -150,5 +150,9 @@ export default {
   display: flex;
   width: 100%;
   justify-content: space-around;
+}
+.registerbox{
+  margin-right: 50px;
+
 }
 </style>
